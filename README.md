@@ -93,6 +93,9 @@ launchd on macOS: a `StartInterval` or `StartCalendarInterval` agent calling the
 Set `NOTIFY_URL` inside the script (e.g. an [ntfy](https://ntfy.sh) topic) to get pinged if
 it ever has to re-apply, which tells you an update tried to switch ACR back on.
 
+A spare Raspberry Pi makes a tidy dedicated home for the guard, and it can run off the TV's
+own USB port so it's only alive when the TV is. See [`pi/`](pi/README.md).
+
 The guard needs network ADB to stay enabled, which means an open, key-authorised ADB port on
 your LAN. That's a trade-off: fine on a trusted home network, not something to expose.
 
