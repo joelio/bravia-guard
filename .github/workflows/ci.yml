@@ -12,7 +12,7 @@ jobs:
   shell:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: shellcheck
         run: shellcheck -s sh config.sh disable.sh restore.sh bravia-guard.sh verify.sh
       - name: syntax
