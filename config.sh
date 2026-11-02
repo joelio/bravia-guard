@@ -24,6 +24,13 @@ DISABLE_PKGS="${DISABLE_PKGS:-tv.samba.ssm com.sonyericsson.idd.agent}"
 #   com.sony.dtv.interactivetvutil(.output)   Sony's "Samba Interactive TV" wrapper
 REMOVE_PKGS="${REMOVE_PKGS:-com.sony.dtv.interactivetvutil com.sony.dtv.interactivetvutil.output}"
 
+# Optional: ad / promo / usage-profiling packages. Not ACR, so off by default;
+# disable.sh only touches these when you pass --ads. All reversible (disable-user).
+#   com.sony.dtv.promos        promotional content
+#   com.sony.dtv.sonyselect    "Sony Select" app recommendations
+#   com.sony.dtv.usercontext   usage-context profiling
+ADS_PKGS="${ADS_PKGS:-com.sony.dtv.promos com.sony.dtv.sonyselect com.sony.dtv.usercontext}"
+
 adb_tv() { $ADB -s "$TV" "$@"; }
 
 ensure_connected() {

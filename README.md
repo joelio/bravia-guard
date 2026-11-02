@@ -61,6 +61,7 @@ adb connect "$BRAVIA_ADDR"               # accept the prompt ON THE TV (tick "al
 
 ./disable.sh --dry-run                   # see exactly what it will run, change nothing
 ./disable.sh                             # do it
+./disable.sh --ads                       # also disable ad / promo / profiling packages
 ./verify.sh                              # watch /proc for 20s; should report CLEAN
 ```
 
@@ -90,6 +91,15 @@ it ever has to re-apply, which tells you an update tried to switch ACR back on.
 
 The guard needs network ADB to stay enabled, which means an open, key-authorised ADB port on
 your LAN. That's a trade-off: fine on a trusted home network, not something to expose.
+
+## Locking down the ADB port
+
+ADB is already gated by RSA key auth, so an unauthorised host gets nowhere. To tighten it
+further, the simplest and most effective step is to **rekey** so exactly one client is
+trusted (Developer options, then Revoke authorisations, then re-authorise one host). If you
+want a network-layer firewall on top, note that a flat-subnet router can't filter traffic
+between LAN peers, so it needs an inline bridge or a VLAN. Both are written up in
+[`openwrt/`](openwrt/README.md).
 
 ## Safety
 

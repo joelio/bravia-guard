@@ -11,6 +11,12 @@ single most useful contribution you can make.
 |---|---|---|---|---|---|---|---|
 | BRAVIA 4K UR3 | `BRAVIA_UR3_EU` | 10 (SDK 29) | EU / en-GB | `tv.samba.ssm` | `com.sonyericsson.idd.agent` | `com.sony.dtv.interactivetvutil`, `com.sony.dtv.interactivetvutil.output` | @joelio |
 
+## Optional ad / promo packages (`--ads`)
+
+Not ACR, but off by default on nobody's behalf. `disable.sh --ads` also disables these.
+On the UR3: `com.sony.dtv.promos`, `com.sony.dtv.sonyselect`, `com.sony.dtv.usercontext`.
+All reversible with `restore.sh`.
+
 ## Find yours
 
 With network ADB enabled and connected (`adb connect <tv-ip>:5555`):
