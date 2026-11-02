@@ -1,0 +1,3 @@
+*.log
+.bravia-guard.log
+.DS_Store

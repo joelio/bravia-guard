@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="bravia-guard: an eye on a television, struck through">
+  <title>bravia-guard</title>
+  <!-- Original artwork. No third-party logos or trademarks. -->
+  <!-- stand -->
+  <g fill="none" stroke="#6b7280" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M104 198 l-16 26"/>
+    <path d="M152 198 l16 26"/>
+    <path d="M78 224 h100"/>
+  </g>
+  <!-- tv body -->
+  <rect x="30" y="40" width="196" height="160" rx="20" fill="#20222a" stroke="#6b7280" stroke-width="6"/>
+  <!-- screen -->
+  <rect x="46" y="56" width="164" height="128" rx="11" fill="#1f8a7a"/>
+  <!-- eye -->
+  <path d="M74 120 Q128 84 182 120 Q128 156 74 120 Z" fill="#f2f5f3"/>
+  <circle cx="128" cy="120" r="19" fill="#20222a"/>
+  <circle cx="121" cy="113" r="6" fill="#f2f5f3"/>
+  <!-- struck through: not watching -->
+  <line x1="80" y1="156" x2="176" y2="84" stroke="#0e0f13" stroke-width="20" stroke-linecap="round" opacity="0.35"/>
+  <line x1="80" y1="156" x2="176" y2="84" stroke="#ef6a4c" stroke-width="12" stroke-linecap="round"/>
+</svg>
