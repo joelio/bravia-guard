@@ -10,6 +10,10 @@ over the network, not over USB; the USB port is just power.
 - A **Pi Zero 2 W** is the right size and draws little enough to sit on a TV USB port.
 - A **Pi 3/4/5** wants its own power supply. Don't run one off a TV USB port; use a wall PSU
   and ignore the "powered from the TV" part.
+- An **older Pi (2 or 3 Model B)** is fine for the job. Two caveats: give it a wall PSU (too
+  hungry for a TV port), and note the **Pi 2 has no onboard Wi-Fi**, so use its Ethernet port
+  (easy, since the TV is already wired) or a USB Wi-Fi dongle. Flash **32-bit** Raspberry Pi
+  OS on a Pi 2; it is ARMv7 and won't boot the 64-bit image.
 - TV USB power usually cuts when the set is off, so the Pi loses power ungracefully. That is
   fine for a guard that only needs to run while the TV is on, but ungraceful shutdowns can
   wear an SD card over time. If that bothers you, enable a read-only/overlay filesystem
