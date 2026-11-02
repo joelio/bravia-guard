@@ -20,7 +20,7 @@ run() {
   else adb_tv shell "$@" 2>&1 | tr -d '\r'; fi
 }
 
-ensure_connected || { echo "Cannot reach $TV. TV on? Network ADB enabled and this host authorised?" >&2; exit 1; }
+[ "$DRY" = 1 ] || ensure_connected || { echo "Cannot reach $TV. TV on? Network ADB enabled and this host authorised?" >&2; exit 1; }
 
 echo "Disabling ACR + telemetry on $TV"
 for p in $DISABLE_PKGS; do
