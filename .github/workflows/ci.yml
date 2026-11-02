@@ -1,0 +1,30 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  shell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: shellcheck
+        run: shellcheck -s sh config.sh disable.sh restore.sh bravia-guard.sh verify.sh
+      - name: syntax
+        run: for f in config.sh disable.sh restore.sh bravia-guard.sh verify.sh; do sh -n "$f"; done
+      - name: dry-run smoke test
+        run: BRAVIA_ADDR=192.0.2.1:5555 sh disable.sh --dry-run --ads
+
+  prose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: novibes (AI-slop score on the docs)
+        uses: joelio/novibes@main
+        with:
+          fail-above: 50

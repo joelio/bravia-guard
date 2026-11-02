@@ -6,6 +6,10 @@
 
 <p align="center">Turn off the ACR and telemetry on a Sony Bravia, prove it's off, and keep it off.</p>
 
+<p align="center">
+  <a href="https://github.com/joelio/bravia-guard/actions/workflows/ci.yml"><img src="https://github.com/joelio/bravia-guard/actions/workflows/ci.yml/badge.svg" alt="CI status"></a>
+</p>
+
 ---
 
 Modern Sony Bravias run Android TV with **Samba TV's ACR** (automatic content recognition)
