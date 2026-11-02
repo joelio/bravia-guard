@@ -119,11 +119,12 @@ between LAN peers, so it needs an inline bridge or a VLAN. Both are written up i
 
 ## Prior art
 
-General Android-TV debloat projects already do the `pm disable-user` dance with restore
-scripts and safety lists, and they're worth a look: for example
-[dumbtv](https://github.com/humblemuzzu/dumbtv). bravia-guard is narrower and Sony-specific:
-it targets the Samba ACR stack by name, verifies the result from the device's own `/proc`,
-and keeps it applied across updates.
+The same no-root, `pm disable-user` approach is well established. The closest sibling is
+[dumbtv](https://github.com/humblemuzzu/dumbtv), which does a thorough job on **Amazon Fire
+TV** (its package list, protected-app handling and replacement launcher are all Fire OS
+specific), and is well worth it if you have one. bravia-guard is the Sony counterpart: it
+targets the Samba ACR and Sony telemetry packages by name, confirms the result from the
+device's own `/proc`, and keeps it applied across firmware updates.
 
 ## Disclaimer
 
